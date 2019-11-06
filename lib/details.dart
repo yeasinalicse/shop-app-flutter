@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 void main() {
-  runApp(MaterialApp(home: details()));
+  runApp(MaterialApp(home: DetailsPage()));
 }
 
-class details extends StatelessWidget {
+class DetailsPage extends StatelessWidget {
+  final String pageTitle;
+  DetailsPage({Key key, this.pageTitle}) : super(key: key);
   final _longText = "Once a modern shopping mall is built, our rents will increase significantly, and we will have to increase our prices as a result. The main reason people come to this market is so they can get items such as imported food at very low prices.";
 //  final _shortText = "Discover the meaning of the Jarnel name on Ancestry®.";
 
