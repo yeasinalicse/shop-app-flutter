@@ -26,4 +26,29 @@ class MainPage extends StatelessWidget {
     );
   }
 
+  Future<bool> _onBackPressed() {
+    return showDialog(
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('Are you sure?'),
+            content: Text('You are going to exit the application!!'),
+            actions: <Widget>[
+              FlatButton(
+                child: Text('NO'),
+                onPressed: () {
+                  Navigator.of(context).pop(false);
+                },
+              ),
+              FlatButton(
+                child: Text('YES'),
+                onPressed: () {
+                  Navigator.maybePop(context);
+                  //Navigator.of(context).pop(true);
+                },
+              ),
+            ],
+          );
+        });
+  }
+
 }

@@ -40,7 +40,14 @@ class _HomePageState extends State<HomePage> {
               margin: EdgeInsets.only(bottom: 0),
               child: flatBtn("Sign In", ()
               {
-                Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.rotate, duration: Duration(seconds: 1),  child: SignInPage()));
+               // Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.rotate, duration: Duration(seconds: 1),  child: SignInPage()));
+
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return SignInPage();
+                }));
+
+
+
                 Toast.show("Toast plugin app", context, duration: Toast.LENGTH_LONG, gravity:  Toast.BOTTOM);
               }),
             ),
